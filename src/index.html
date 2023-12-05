@@ -5,7 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
-  Hello world
+<body class="page">
+
+  <nav class="sidemenu">
+
+    <div class="sidemenu__block sidemenu__general">
+      <div class="sidemenu__general-profile">
+        <button class="profile-button"></button>
+        <button class="sidemenu-button">
+          <img src="<%=require('./svg/menu.svg')%>" class="menu-icon" alt=""/>
+        </button>
+      </div>
+      <div class="sidemenu__block-first">
+        <ul class="sidemenu__block__list">
+          <li class="sidemenu__block__list-item">
+            <button class="sidemenu-button">
+              <img src="<%=require('./svg/list-check.svg')%>" alt=""/>
+            </button>
+          </li>
+          <li class="sidemenu__block__list-item">
+            <button class="sidemenu-button">
+              <img src="<%=require('./svg/person.svg')%>" alt=""/>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="sidemenu__block-second">
+        <ul class="sidemenu__block__list">
+          <li class="sidemenu__block__list-item">
+            <button class="sidemenu-button">
+              <img src="<%=require('./svg/star.svg')%>" alt=""/>
+            </button>
+          </li>
+
+          <li class="sidemenu__block__list-item">
+            <button class="sidemenu-button">
+              <img src="<%=require('./svg/graduation-cap.svg')%>" alt=""/>
+            </button>
+          </li>
+
+          <li class="sidemenu__block__list-item">
+            <button class="sidemenu-button">
+              <img src="<%=require('./svg/comment.svg')%>" alt=""/>
+            </button>
+          </li>
+
+          <li class="sidemenu__block__list-item">
+            <button class="sidemenu-button">
+              <img src="<%=require('./svg/chart-pie.svg')%>" alt=""/>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidemenu__block sidemenu__settings">
+      <ul class="sidemenu__block__list">
+        <li class="sidemenu__block__list-item">
+          <button class="sidemenu-button">
+            <img src="<%=require('./svg/bell.svg')%>" alt=""/>
+          </button>
+        </li>
+
+        <li class="sidemenu__block__list-item">
+          <button class="sidemenu-button">
+            <img src="<%=require('./svg/setting.svg')%>" alt=""/>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
 </body>
 </html>

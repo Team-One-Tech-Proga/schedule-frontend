@@ -1,0 +1,7 @@
+:root {
+    --background-color: rgba(34, 35, 38, 1);
+    --accent-color: rgba(255, 255, 255, 0.85);
+    --secondary-color: rgba(66, 65, 71, 1);
+    --subtitle-color: rgba(255, 255, 255, 0.5);
+    --main-color: rgba(255, 190, 92, 0.3);
+}

@@ -1,0 +1,76 @@
+@import 'globals.css';
+@import 'variables.css';
+
+.page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+/*
+    Элемент для всех кнопок бокового меню
+    нужен чтобы установить общие стили для наведения
+*/
+
+.sidemenu-button {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color ease .5s;
+}
+
+.sidemenu-button:hover {
+    background-color: var(--main-color);
+}
+
+/*
+    Стили для бокового меню и его элементов
+*/
+
+.sidemenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    height: 100vh;
+    border-right: 1px solid var(--secondary-color);
+}
+
+.sidemenu__general {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidemenu__settings {
+    padding-bottom: 20px;
+}
+
+.sidemenu__general-profile {
+    background-color: var(--main-color);
+    padding: 20px 0 10px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 20px;
+}
+
+.profile-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.sidemenu__block__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidemenu__block__list-item {
+    display: flex;
+    place-content: center;
+}
+
