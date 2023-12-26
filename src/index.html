@@ -10,12 +10,11 @@
   <nav class="sidemenu">
 
     <div class="sidemenu__block sidemenu__general">
+
       <div class="sidemenu__general-profile">
         <button class="profile-button"></button>
-        <button class="sidemenu-button">
-          <img src="<%=require('./svg/menu.svg')%>" class="menu-icon" alt=""/>
-        </button>
       </div>
+
       <div class="sidemenu__block-first">
         <ul class="sidemenu__block__list">
           <li class="sidemenu__block__list-item">
@@ -30,52 +29,121 @@
           </li>
         </ul>
       </div>
-      <div class="sidemenu__block-second">
-        <ul class="sidemenu__block__list">
-          <li class="sidemenu__block__list-item">
-            <button class="sidemenu-button">
-              <img src="<%=require('./svg/star.svg')%>" alt=""/>
-            </button>
-          </li>
 
-          <li class="sidemenu__block__list-item">
-            <button class="sidemenu-button">
-              <img src="<%=require('./svg/graduation-cap.svg')%>" alt=""/>
-            </button>
-          </li>
-
-          <li class="sidemenu__block__list-item">
-            <button class="sidemenu-button">
-              <img src="<%=require('./svg/comment.svg')%>" alt=""/>
-            </button>
-          </li>
-
-          <li class="sidemenu__block__list-item">
-            <button class="sidemenu-button">
-              <img src="<%=require('./svg/chart-pie.svg')%>" alt=""/>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sidemenu__block sidemenu__settings">
-      <ul class="sidemenu__block__list">
-        <li class="sidemenu__block__list-item">
-          <button class="sidemenu-button">
-            <img src="<%=require('./svg/bell.svg')%>" alt=""/>
-          </button>
-        </li>
-
-        <li class="sidemenu__block__list-item">
-          <button class="sidemenu-button">
-            <img src="<%=require('./svg/setting.svg')%>" alt=""/>
-          </button>
-        </li>
-      </ul>
     </div>
 
   </nav>
+
+  <main class="content">
+    <div class="content__info">
+      <h1 class="content__info-title">Расписание</h1>
+      <h2 class="content__info-group">группы МИСТ-23-3</h2>
+    </div>
+
+    <div class="content__filter">
+      <select name="filter-from" class="filter">
+        <option value="1">Январь</option>
+        <option value="2">Февраль</option>
+        <option value="3">Март</option>
+        <option value="4">Апрель</option>
+      </select>
+    </div>
+
+    <div class="content__schedule">
+      <ul class="content__schedule-list">
+        <li class="content__schedule-item">
+          <article class="schedule">
+            <div class="schedule__info">
+              <h3 class="schedule__info-title">Среда</h3>
+              <p class="schedule__info-date">20 декабря</p>
+            </div>
+            <div class="schedule__cards">
+
+              <article class="card">
+                <div class="card__info">
+                  <p class="card__info-status">Практика</p>
+                  <h3 class="card__info-title">Технология программирования</h3>
+                  <p class="card__info-author">Марк Вишневский</p>
+                </div>
+                <div class="card__date">
+                  <img src="<%=require('./svg/time.svg')%>" alt="иконка часов" class="card__date-icon">
+                  <p class="card-date">17:30 - 19:00</p>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card__info">
+                  <p class="card__info-status">Практика</p>
+                  <h3 class="card__info-title">Основы методологии и проектирования дизайна</h3>
+                  <p class="card__info-author">Марк Вишневский</p>
+                </div>
+                <div class="card__date">
+                  <img src="<%=require('./svg/time.svg')%>" alt="иконка часов" class="card__date-icon">
+                  <p class="card-date">17:30 - 19:00</p>
+                </div>
+              </article>
+
+            </div>
+          </article>
+        </li>
+
+        <li class="content__schedule-item">
+          <article class="schedule">
+            <div class="schedule__info">
+              <h3 class="schedule__info-title">Четверг</h3>
+              <p class="schedule__info-date">21 декабря</p>
+            </div>
+            <div class="schedule__cards">
+
+              <article class="card">
+                <div class="card__info">
+                  <p class="card__info-status">Практика</p>
+                  <h3 class="card__info-title">Основы UI/UX дизайна</h3>
+                  <p class="card__info-author">Марк Вишневский</p>
+                </div>
+                <div class="card__date">
+                  <img src="<%=require('./svg/time.svg')%>" alt="иконка часов" class="card__date-icon">
+                  <p class="card-date">17:30 - 19:00</p>
+                </div>
+              </article>
+
+            </div>
+          </article>
+        </li>
+
+      </ul>
+    </div>
+
+  </main>
+
+  <template id="schedule">
+    <li>
+      <article class="schedule">
+        <div class="schedule__info">
+          <h3 class="schedule__info-title">Четверг</h3>
+          <p class="schedule__info-date">21 декабря</p>
+        </div>
+        <div class="schedule__cards">
+          <!-- Тут карточки предметов -->
+        </div>
+      </article>
+    </li>
+  </template>
+
+  <!-- Элемент карточки предмета -->
+  <template id="card">
+    <article class="card">
+      <div class="card__info">
+        <p class="card__info-status"></p>
+        <h3 class="card__info-title"></h3>
+        <p class="card__info-author"></p>
+      </div>
+      <div class="card__date">
+        <img src="<%=require('./svg/time.svg')%>" alt="иконка часов" class="card__date-icon">
+        <p class="card__date-time">17:30 - 19:00</p>
+      </div>
+    </article>
+  </template>
 
 </body>
 </html>
